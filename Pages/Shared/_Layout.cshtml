@@ -1,19 +1,14 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-
-
     <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta name="keywords" content="" />
     <meta name="description" content="Airport Travel ">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>@ViewData["Title"] - Airport Travel</title>
-
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-
     <!-- Theme Styles -->
     <link rel="stylesheet" href="~/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/font-awesome.min.css">
@@ -33,26 +28,20 @@
     <!-- Responsive Styles -->
     <link rel="stylesheet" href="~/css/responsive.css">
     @RenderSection("Styles", required: false)
-
 </head>
 <body>
     <div id="page-wrapper">
         <header id="header" class="navbar-static-top">
-
-
             <div class="main-header">
-
                 <a href="#mobile-menu-01" data-toggle="collapse" class="mobile-menu-toggle">
                     Mobile Menu Toggle
                 </a>
-
                 <div class="container">
                     <h1 class="logo navbar-brand">
                         <a href="index.html" title="Airport Travel - home">
                             <img src="images/logo.png" alt="Travelo HTML5 Template" />
                         </a>
                     </h1>
-
                     <nav id="main-menu" role="navigation">
                         <ul class="menu">
                             <li class="menu-item-has-children">
@@ -67,11 +56,9 @@
                             <li class="menu-item-has-children">
                                 <a asp-area="" asp-page="/site-map">Site map</a>
                             </li>
-
                         </ul>
                     </nav>
                 </div>
-
                 <nav id="mobile-menu-01" class="mobile-menu collapse">
                     <ul id="mobile-primary-menu" class="menu">
                         <li class="">
@@ -87,26 +74,10 @@
                             <a asp-area="" asp-page="/site-map">Site map</a>
                         </li>
                     </ul>
-
-
-
                 </nav>
             </div>
-
         </header>
-
-
-
-
-
         @RenderBody()
-
-
-
-
-
-
-
         <footer id="footer">
             <div class="footer-wrapper">
                 <div class="container">
@@ -117,28 +88,28 @@
                                 <li class="col-xs-6">
 
                                     <a asp-area="" asp-page="/Index">Home</a>
-                                    
-                                
+
+
                                 </li>
                                 <li class="col-xs-6">
 
                                     <a asp-area="" asp-page="/about-us">About us</a>
-                                    
-                                
-                                
+
+
+
                                 </li>
                                 <li class="col-xs-6">
 
 
                                     <a asp-area="" asp-page="/contact-us">Contact us</a>
-                                    
+
                                 </li>
                                 <li class="col-xs-6">
 
 
 
                                     <a asp-area="" asp-page="/site-map">Site map</a>
-                                    
+
                                 </li>
 
                             </ul>
@@ -171,16 +142,7 @@
                             </ul>
                         </div>
                     </div>
-
-
-
-
-
-
-
                     <hr />
-
-
                     <div class="row mt-3">
                         <div class="col-lg-12">
                             <p class="phone-info ms-0">
@@ -193,14 +155,6 @@
                             </div>
                         </div>
                     </div>
-
-         
-
-
-                    
-                
-                
-                
                 </div>
             </div>
             <div class="bottom gray-area">
@@ -220,19 +174,6 @@
             </div>
         </footer>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Javascript -->
     <script type="text/javascript" src="~/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="~/js/jquery.noconflict.js"></script>
@@ -258,7 +199,6 @@
     <!-- load page Javascript -->
     <script type="text/javascript" src="~/js/theme-scripts.js"></script>
     <script type="text/javascript" src="~/js/scripts.js"></script>
-
     @RenderSection("Scripts", required: false)
 </body>
 </html>
