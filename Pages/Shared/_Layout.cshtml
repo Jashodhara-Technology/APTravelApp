@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
+    <meta name="description" content="Airport Travel ">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewData["Title"] - Airport Travel</title>
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/css/animate.min.css">
+    <!-- Current Page Styles -->
+    <link rel="stylesheet" type="text/css" href="~/components/revolution_slider/css/settings.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/components/revolution_slider/css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/components/jquery.bxslider/jquery.bxslider.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/components/flexslider/flexslider.css" media="screen" />
+    <!-- Main Style -->
+    <link id="main-style" rel="stylesheet" href="~/css/style.css">
+    <!-- Updated Styles -->
+    <link rel="stylesheet" href="~/css/updates.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="~/css/custom.css">
+    <!-- Responsive Styles -->
+    <link rel="stylesheet" href="~/css/responsive.css">
+
+
+</head>
+<body>
+    <div id="page-wrapper">
+        <header id="header" class="navbar-static-top">
+
+
+            <div class="main-header">
+
+                <a href="#mobile-menu-01" data-toggle="collapse" class="mobile-menu-toggle">
+                    Mobile Menu Toggle
+                </a>
+
+                <div class="container">
+                    <h1 class="logo navbar-brand">
+                        <a href="index.html" title="Airport Travel - home">
+                            <img src="images/logo.png" alt="Travelo HTML5 Template" />
+                        </a>
+                    </h1>
+
+                    <nav id="main-menu" role="navigation">
+                        <ul class="menu">
+                            <li class="menu-item-has-children">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="menu-item-has-children active">
+                                <a href="about-us.html">About us</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="contact-us.html">Contact us</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="site-map.html">Site map</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <nav id="mobile-menu-01" class="mobile-menu collapse">
+                    <ul id="mobile-primary-menu" class="menu">
+                        <li class="">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="active">
+                            <a href="about-us.html">About us</a>
+                        </li>
+                        <li class="">
+                            <a href="contact-us.html">Contact us</a>
+                        </li>
+                        <li class="">
+                            <a href="site-map.html">Site map</a>
+                        </li>
+                    </ul>
+
+
+
+                </nav>
+            </div>
+
+        </header>
+
+
+
+
+
+        @RenderBody()
+
+
+
+
+
+
+
+        <footer id="footer">
+            <div class="footer-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <h2>Discover</h2>
+                            <ul class="discover triangle hover row">
+                                <li class="col-xs-6"><a href="index.html">Home</a></li>
+                                <li class="col-xs-6"><a href="about-us.html">About Us</a></li>
+                                <li class="col-xs-6"><a href="contact-us.html">Contact Us</a></li>
+                                <li class="col-xs-6"><a href="site-map.html">Site Map</a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <h2>Mailing List</h2>
+                            <p>Sign up for our mailing list to get latest updates and offers.</p>
+                            <br />
+                            <div class="icon-check">
+                                <input type="text" class="input-text full-width" placeholder="your email" />
+                            </div>
+                            <br />
+                            <span>We respect your privacy</span>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <h2>About Airport Travel & Tour </h2>
+                            <p>Airport Travel is one of the leading travel companies in the UK. Comprising highly experienced professionals we aim to offer our clients the best travel deals all across the world.</p>
+                            <br />
+                            <address class="contact-details">
+                                <span class="contact-phone"><i class="soap-icon-phone"></i> 0121 500 5171</span>
+                                <br />
+                                <a href="mailto:info@airport-travel.net" class="contact-email"><i class="fa fa-envelope"></i> info@airport-travel.net</a>
+                            </address>
+                            <ul class="social-icons clearfix">
+                                <li class="twitter"><a title="twitter" href="#" data-toggle="tooltip"><i class="soap-icon-twitter"></i></a></li>
+                                <li class="facebook"><a title="facebook" href="#" data-toggle="tooltip"><i class="soap-icon-facebook"></i></a></li>
+                                <li class="linkedin"><a title="linkedin" href="#" data-toggle="tooltip"><i class="soap-icon-linkedin"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom gray-area">
+                <div class="container">
+                    <div class="logo pull-left">
+                        <a href="index.html" title="Travelo - home">
+                            <img src="images/footer-logo.png" alt="Travelo HTML5 Template" />
+                        </a>
+                    </div>
+                    <div class="pull-right">
+                        <a id="back-to-top" href="#" class="animated" data-animation-type="bounce"><i class="soap-icon-longarrow-up circle"></i></a>
+                    </div>
+                    <div class="copyright pull-right">
+                        <p>&copy; 2021 Airport Travel & Tour Ltd.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="~/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="~/js/modernizr.2.7.1.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="~/js/jquery-ui.1.10.4.min.js"></script>
+    <!-- Twitter Bootstrap -->
+    <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+    <!-- load revolution slider scripts -->
+    <script type="text/javascript" src="~/components/revolution_slider/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="~/components/revolution_slider/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- load BXSlider scripts -->
+    <script type="text/javascript" src="~/components/jquery.bxslider/jquery.bxslider.min.js"></script>
+    <!-- Flex Slider -->
+    <script type="text/javascript" src="~/components/flexslider/jquery.flexslider.js"></script>
+    <!-- parallax -->
+    <script type="text/javascript" src="~/js/jquery.stellar.min.js"></script>
+    <!-- parallax -->
+    <script type="text/javascript" src="~/js/jquery.stellar.min.js"></script>
+    <!-- waypoint -->
+    <script type="text/javascript" src="~/js/waypoints.min.js"></script>
+    <!-- load page Javascript -->
+    <script type="text/javascript" src="~/js/theme-scripts.js"></script>
+    <script type="text/javascript" src="~/js/scripts.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
