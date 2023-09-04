@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="col-xs-6">
                                     <label>Your Email</label>
-                                    <input class="input-text full-width" type="text" placeholder="Name" asp-for="SaleModel!.Email" />
+                                    <input class="input-text full-width" type="text" placeholder="Email" asp-for="SaleModel!.Email" />
                                     <span asp-validation-for="SaleModel.Email"></span>
                                 </div>
                             </div>
@@ -110,3 +110,11 @@
         </div>
     </div>
 </section>
+
+
+<!-- END ABOUT US -->
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
