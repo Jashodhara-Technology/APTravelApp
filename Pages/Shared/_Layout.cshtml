@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="~/css/custom.css">
     <!-- Responsive Styles -->
     <link rel="stylesheet" href="~/css/responsive.css">
-
+    @RenderSection("Styles", required: false)
 
 </head>
 <body>
@@ -56,16 +56,16 @@
                     <nav id="main-menu" role="navigation">
                         <ul class="menu">
                             <li class="menu-item-has-children">
-                                <a href="index.html">Home</a>
+                                <a asp-area="" asp-page="/Index">Home</a>
                             </li>
                             <li class="menu-item-has-children active">
-                                <a href="about-us.html">About us</a>
+                                <a asp-area="" asp-page="/about-us">About us</a>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="contact-us.html">Contact us</a>
+                                <a asp-area="" asp-page="/contact-us">Contact us</a>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="site-map.html">Site map</a>
+                                <a asp-area="" asp-page="/site-map">Site map</a>
                             </li>
 
                         </ul>
@@ -75,16 +75,16 @@
                 <nav id="mobile-menu-01" class="mobile-menu collapse">
                     <ul id="mobile-primary-menu" class="menu">
                         <li class="">
-                            <a href="index.html">Home</a>
+                            <a asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="active">
-                            <a href="about-us.html">About us</a>
+                            <a asp-area="" asp-page="/about-us">About us</a>
                         </li>
                         <li class="">
-                            <a href="contact-us.html">Contact us</a>
+                            <a asp-area="" asp-page="/contact-us">Contact us</a>
                         </li>
                         <li class="">
-                            <a href="site-map.html">Site map</a>
+                            <a asp-area="" asp-page="/site-map">Site map</a>
                         </li>
                     </ul>
 
@@ -114,10 +114,32 @@
                         <div class="col-sm-6 col-md-4">
                             <h2>Discover</h2>
                             <ul class="discover triangle hover row">
-                                <li class="col-xs-6"><a href="index.html">Home</a></li>
-                                <li class="col-xs-6"><a href="about-us.html">About Us</a></li>
-                                <li class="col-xs-6"><a href="contact-us.html">Contact Us</a></li>
-                                <li class="col-xs-6"><a href="site-map.html">Site Map</a></li>
+                                <li class="col-xs-6">
+
+                                    <a asp-area="" asp-page="/Index">Home</a>
+                                    
+                                
+                                </li>
+                                <li class="col-xs-6">
+
+                                    <a asp-area="" asp-page="/about-us">About us</a>
+                                    
+                                
+                                
+                                </li>
+                                <li class="col-xs-6">
+
+
+                                    <a asp-area="" asp-page="/contact-us">Contact us</a>
+                                    
+                                </li>
+                                <li class="col-xs-6">
+
+
+
+                                    <a asp-area="" asp-page="/site-map">Site map</a>
+                                    
+                                </li>
 
                             </ul>
                         </div>
