@@ -46,10 +46,9 @@ namespace APTravelApp.Services
 
                 SmtpClient client = new SmtpClient();
 
-                //client.Credentials = new System.Net.NetworkCredential(_mailSettings.Mail.Trim(), _mailSettings.Password.Trim(), "resindia.co.in");
-                //client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                //client.UseDefaultCredentials = false;
-
+                client.Credentials = new System.Net.NetworkCredential(_mailSettings.Mail.Trim(), _mailSettings.Password.Trim(), _mailSettings.DisplayName);
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                client.UseDefaultCredentials = false;
                 client.Host = _mailSettings.Host;
                 client.Port = _mailSettings.Port;
                 client.EnableSsl = _mailSettings.EnableSsl;
@@ -59,12 +58,10 @@ namespace APTravelApp.Services
                     foreach (var file in mailRequest.Attachments)
                     {
                         Random rnd = new Random();
-                        string fileName = Path.Combine(mailRequest.SourcePath, file.FileName+ rnd.Next(1, 20).ToString() + DateTime.Now.ToString());
+                        string fileName = Path.Combine(mailRequest.SourcePath, file.FileName + rnd.Next(1, 20).ToString() + DateTime.Now.ToString());
                         long length = file.Length;
                         if (length > 0)
                         {
-
-
                             FileStream fileStream = new FileStream(fileName, FileMode.OpenOrCreate);
                             byte[] bytes = new byte[length];
                             fileStream.Read(bytes, 0, (int)file.Length);

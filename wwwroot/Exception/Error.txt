@@ -1,0 +1,14 @@
+-----------------------------------------------------------------------------
+Date : 04-09-2023 16:45:59
+
+System.Net.Mail.SmtpException
+Message : Service not available, closing transmission channel. The server response was: p3nlsmtp13.shr.prod.phx3.secureserver.net : HOSTING RELAY : ESMTP No Grid/Plesk Relay Access Allowed From 122.177.108.81
+StackTrace :    at APTravelApp.Services.MailService.SendEmailAsync(MailRequest mailRequest) in D:\Rakesh\APTravelApp\APTravelApp\Services\MailService.cs:line 82
+   at APTravelApp.Pages.contact_usModel.OnPostSales() in D:\Rakesh\APTravelApp\APTravelApp\Pages\contact-us.cshtml.cs:line 69
+-----------------------------------------------------------------------------
+Date : 04-09-2023 16:51:05
+
+System.Net.Mail.SmtpException
+Message : Service not available, closing transmission channel. The server response was: p3nlsmtp13.shr.prod.phx3.secureserver.net : HOSTING RELAY : ESMTP No Grid/Plesk Relay Access Allowed From 122.177.108.81
+StackTrace :    at APTravelApp.Services.MailService.SendEmailAsync(MailRequest mailRequest) in D:\Rakesh\APTravelApp\APTravelApp\Services\MailService.cs:line 82
+   at APTravelApp.Pages.contact_usModel.OnPostSales() in D:\Rakesh\APTravelApp\APTravelApp\Pages\contact-us.cshtml.cs:line 69

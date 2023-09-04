@@ -20,7 +20,7 @@ namespace APTravelApp.Models
         [RegularExpression(@"(^[0-9]{10}$)|(^\+[0-9]{2}\s+[0-9]{2}[0-9]{8}$)|(^[0-9]{3}-[0-9]{4}-[0-9]{4}$)", ErrorMessage = "Not a valid phone number")]
         [StringLength(15, MinimumLength = 10)]
         public string PhoneNo { get; set; }
-        [Required]
+
         public string Message { get; set; }
 
 
