@@ -46,9 +46,10 @@ namespace APTravelApp.Services
 
                 SmtpClient client = new SmtpClient();
 
-                client.Credentials = new System.Net.NetworkCredential(_mailSettings.Mail.Trim(), _mailSettings.Password.Trim(), _mailSettings.DisplayName);
-                client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                client.UseDefaultCredentials = false;
+                //client.Credentials = new System.Net.NetworkCredential(_mailSettings.Mail.Trim(), _mailSettings.Password.Trim(), _mailSettings.DisplayName);
+                //client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                //client.UseDefaultCredentials = false;
+
                 client.Host = _mailSettings.Host;
                 client.Port = _mailSettings.Port;
                 client.EnableSsl = _mailSettings.EnableSsl;
