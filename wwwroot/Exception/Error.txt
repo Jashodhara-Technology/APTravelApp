@@ -1,14 +1,14 @@
------------------------------------------------------------------------------
-Date : 04-09-2023 16:45:59
+
+Date : 14-09-2023 10:29:33
 
 System.Net.Mail.SmtpException
-Message : Service not available, closing transmission channel. The server response was: p3nlsmtp13.shr.prod.phx3.secureserver.net : HOSTING RELAY : ESMTP No Grid/Plesk Relay Access Allowed From 122.177.108.81
-StackTrace :    at APTravelApp.Services.MailService.SendEmailAsync(MailRequest mailRequest) in D:\Rakesh\APTravelApp\APTravelApp\Services\MailService.cs:line 82
-   at APTravelApp.Pages.contact_usModel.OnPostSales() in D:\Rakesh\APTravelApp\APTravelApp\Pages\contact-us.cshtml.cs:line 69
+Message : Service not available, closing transmission channel. The server response was: p3nlsmtp15.shr.prod.phx3.secureserver.net : HOSTING RELAY : ESMTP No Grid/Plesk Relay Access Allowed From 122.177.111.209
+StackTrace :    at APTravelApp.Services.MailService.SendEmailAsync(MailRequest mailRequest) in D:\Rakesh\APTravelApp\Services\MailService.cs:line 80
+   at APTravelApp.Pages.contact_usModel.OnPostSales() in D:\Rakesh\APTravelApp\Pages\contact-us.cshtml.cs:line 69
 -----------------------------------------------------------------------------
-Date : 04-09-2023 16:51:05
+Date : 19-09-2023 18:24:03
 
 System.Net.Mail.SmtpException
-Message : Service not available, closing transmission channel. The server response was: p3nlsmtp13.shr.prod.phx3.secureserver.net : HOSTING RELAY : ESMTP No Grid/Plesk Relay Access Allowed From 122.177.108.81
-StackTrace :    at APTravelApp.Services.MailService.SendEmailAsync(MailRequest mailRequest) in D:\Rakesh\APTravelApp\APTravelApp\Services\MailService.cs:line 82
-   at APTravelApp.Pages.contact_usModel.OnPostSales() in D:\Rakesh\APTravelApp\APTravelApp\Pages\contact-us.cshtml.cs:line 69
+Message : Service not available, closing transmission channel. The server response was: p3nlsmtp15.shr.prod.phx3.secureserver.net : HOSTING RELAY : ESMTP No Grid/Plesk Relay Access Allowed From 122.177.108.255
+StackTrace :    at APTravelApp.Services.MailService.SendEmailAsync(MailRequest mailRequest) in D:\Rakesh\APTravelApp\Services\MailService.cs:line 89
+   at APTravelApp.Pages.contact_usModel.OnPostSales() in D:\Rakesh\APTravelApp\Pages\contact-us.cshtml.cs:line 51

@@ -12,11 +12,6 @@ namespace APTravelApp.Pages
 {
     public class contact_usModel : PageModel
     {
-
-
-
-
-
         private readonly IMailService mailSrv;
         private readonly MailSettings _mailSettings;
         private readonly IWebHostEnvironment _hostEnvironment;
@@ -30,12 +25,6 @@ namespace APTravelApp.Pages
         [BindProperty]
         public Customer SaleModel { get; set; }
 
-
-
-
-
-
-
         public async Task<IActionResult> OnPostSales()
         {
             string wwwRootPath = _hostEnvironment.WebRootPath;
@@ -44,11 +33,7 @@ namespace APTravelApp.Pages
                 ModelState.Clear();
                 if (TryValidateModel(SaleModel))
                 {
-
-
-
                     string body = string.Empty;
-
                     string path = Path.Combine(wwwRootPath + "/template/", "emailer-query.html");
                     using (StreamReader reader = new StreamReader(path))
                     {
@@ -58,22 +43,14 @@ namespace APTravelApp.Pages
                     body = body.Replace("{Email}", SaleModel.Email);
                     body = body.Replace("{PhoneNo}", SaleModel.PhoneNo);
                     body = body.Replace("{Message}", SaleModel.Message);
-
-
                     MailRequest _mail = new MailRequest();
                     _mail.Subject = "Sales Query";
                     _mail.ToEmail = _mailSettings.Mail;
                     _mail.Body = body;
                     _mail.SourcePath = _hostEnvironment.WebRootPath + "/Exception/";
-
                     await mailSrv.SendEmailAsync(_mail);
                     await ThanksMail(SaleModel.Name, SaleModel.Email);
                     return RedirectToPage("/Thanks");
-
-
-
-
-
                 }
                 else
                 {
@@ -86,9 +63,6 @@ namespace APTravelApp.Pages
                 mailSrv.WriteException(path, ex);
                 return RedirectToPage("/Error");
             }
-
-
-
         }
 
         public async Task ThanksMail(string Name, string Email)

@@ -9,6 +9,7 @@ using System;
 using Microsoft.AspNetCore.Http;
 using APTravelApp.Services.IServices;
 using APTravelApp.Models;
+using System.Net;
 
 namespace APTravelApp.Services
 {
@@ -47,8 +48,12 @@ namespace APTravelApp.Services
                 SmtpClient client = new SmtpClient();
 
                 //client.Credentials = new System.Net.NetworkCredential(_mailSettings.Mail.Trim(), _mailSettings.Password.Trim(), _mailSettings.DisplayName);
-                //client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                //client.UseDefaultCredentials = false;
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+
+                //client.Credentials = new System.Net.NetworkCredential(_mailSettings.Mail.Trim(), _mailSettings.Password.Trim(),  _mailSettings.DisplayName);
+                
+                client.UseDefaultCredentials = false;
 
                 client.Host = _mailSettings.Host;
                 client.Port = _mailSettings.Port;
@@ -71,6 +76,10 @@ namespace APTravelApp.Services
                         }
                     }
                 }
+
+
+                //call this line, before you call .Send
+                client.Credentials = CredentialCache.DefaultNetworkCredentials;
                 await client.SendMailAsync(message);
 
             }
