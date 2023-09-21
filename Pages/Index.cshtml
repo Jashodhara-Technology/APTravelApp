@@ -869,7 +869,9 @@
 
             <div class="search-tab-content">
                 <div class="tab-pane fade active in" id="hotels-tab">
-                    <form action="hotel-list-view.html" method="post">
+
+                    @using (Html.BeginForm(FormMethod.Post, new { id = "frmSales" }))
+                    {
                         <div class="row">
                             <div class="form-group col-sm-6 col-md-3">
                                 <h4 class="title">Where</h4>
@@ -937,12 +939,15 @@
                             <div class="form-group col-sm-6 col-md-2 fixheight">
                                 <label class="hidden-xs">&nbsp;</label>
                                 <button type="submit" class="full-width icon-check animated" data-animation-type="bounce" data-animation-duration="1">SEARCH NOW</button>
+
+
+
                             </div>
                         </div>
-                    </form>
+                    }
                 </div>
                 <div class="tab-pane fade" id="flights-tab">
-                    <form action="flight-list-view.html" method="post">
+                    <form method="post">
                         <div class="row">
                             <div class="col-md-4">
                                 <h4 class="title">Where</h4>
@@ -1036,7 +1041,7 @@
                                     </div>
                                     <div class="col-xs-6 pull-right">
                                         <label>&nbsp;</label>
-                                        <button class="full-width icon-check">SERACH NOW</button>
+                                        <button class="full-width icon-check" type="submit">SERACH NOW</button>
                                     </div>
                                 </div>
                             </div>
@@ -1045,7 +1050,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="flight-and-hotel-tab">
-                    <form action="" method="post">
+                    <form method="post">
                         <div class="row">
                             <div class="col-md-4">
                                 <h4 class="title">Where</h4>
@@ -1139,7 +1144,7 @@
                                     </div>
                                     <div class="col-xs-6 pull-right">
                                         <label>&nbsp;</label>
-                                        <button class="full-width icon-check">SERACH NOW</button>
+                                        <button class="full-width icon-check" type="submit">SERACH NOW</button>
                                     </div>
                                 </div>
                             </div>
@@ -1148,7 +1153,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="cars-tab">
-                    <form action="car-list-view.html" method="post">
+                    <form method="post">
                         <div class="row">
                             <div class="col-md-4">
                                 <h4 class="title">Where</h4>
@@ -1245,7 +1250,7 @@
                                     </div>
                                     <div class="col-xs-6">
                                         <label>&nbsp;</label>
-                                        <button class="full-width icon-check">SERACH NOW</button>
+                                        <button class="full-width icon-check" type="submit">SERACH NOW</button>
                                     </div>
                                 </div>
                             </div>
@@ -1254,7 +1259,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="cruises-tab">
-                    <form action="cruise-list-view.html" method="post">
+                    <form method="post">
                         <div class="row">
                             <div class="col-md-4">
                                 <h4 class="title">Where</h4>
@@ -1326,7 +1331,7 @@
                                     </div>
                                     <div class="col-xs-6">
                                         <label>&nbsp;</label>
-                                        <button class="icon-check full-width">SEARCH NOW</button>
+                                        <button class="full-width icon-check" type="submit">SEARCH NOW</button>
                                     </div>
                                 </div>
                             </div>
@@ -1335,7 +1340,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="flight-status-tab">
-                    <form action="flight-list-view.html" method="post">
+                    <form method="post">
                         <div class="row">
                             <div class="col-md-6">
                                 <h4 class="title">Where</h4>
@@ -1370,14 +1375,14 @@
                             </div>
                             <div class="form-group col-md-2 fixheight">
                                 <label class="hidden-xs">&nbsp;</label>
-                                <button class="icon-check full-width">SEARCH NOW</button>
+                                <button class="icon-check full-width" type="submit">SEARCH NOW</button>
                             </div>
                         </div>
                     </form>
                 </div>
 
                 <div class="tab-pane fade" id="online-checkin-tab">
-                    <form>
+                    <form method="post">
                         <div class="row">
                             <div class="col-md-6">
                                 <h4 class="title">Where</h4>
@@ -1412,7 +1417,7 @@
                             </div>
                             <div class="form-group col-md-2 fixheight">
                                 <label class="hidden-xs">&nbsp;</label>
-                                <button class="icon-check full-width">SEARCH NOW</button>
+                                <button class="icon-check full-width" type="submit">SEARCH NOW</button>
                             </div>
                         </div>
                     </form>
@@ -1487,35 +1492,35 @@
                     <div class="col-sms-4 col-sm-4">
                         <article class="box">
                             <figure>
-                                <a href="hotel-list-view.html" title="" class="hover-effect yellow middle-block animated" data-animation-type="fadeInUp" data-animation-duration="1">
+                                <a asp-area="" asp-page="/thanks" title="" class="hover-effect yellow middle-block animated" data-animation-type="fadeInUp" data-animation-duration="1">
                                     <img src="images/places01.jpg" alt="" width="306" height="170" />
                                 </a>
                             </figure>
                             <div class="details">
                                 <h4 class="box-title">Paris<small>(990 PLACES)</small></h4>
-                                <a href="hotel-list-view.html" title="" class="button">SEE ALL</a>
+                                <a asp-area="" asp-page="/thanks" title="" class="button">SEE ALL</a>
                             </div>
                         </article>
                     </div>
                     <div class="col-sms-4 col-sm-4">
                         <article class="box">
                             <figure>
-                                <a href="hotel-list-view.html" title="" class="hover-effect yellow middle-block animated" data-animation-type="fadeInUp" data-animation-duration="1" data-animation-delay="0.4"><img src="images/places02.jpg" alt="" width="175" height="175" /></a>
+                                <a asp-area="" asp-page="/thanks" title="" class="hover-effect yellow middle-block animated" data-animation-type="fadeInUp" data-animation-duration="1" data-animation-delay="0.4"><img src="images/places02.jpg" alt="" width="175" height="175" /></a>
                             </figure>
                             <div class="details">
                                 <h4 class="box-title">Greece<small>(990 PLACES)</small></h4>
-                                <a href="hotel-list-view.html" title="" class="button">SEE ALL</a>
+                                <a asp-area="" asp-page="/thanks" title="" class="button">SEE ALL</a>
                             </div>
                         </article>
                     </div>
                     <div class="col-sms-4 col-sm-4">
                         <article class="box">
                             <figure>
-                                <a href="hotel-list-view.html" title="" class="hover-effect yellow middle-block animated" data-animation-type="fadeInUp" data-animation-duration="1" data-animation-delay="0.8"><img src="images/places03.jpg" alt="" width="340" height="226" /></a>
+                                <a asp-area="" asp-page="/thanks" title="" class="hover-effect yellow middle-block animated" data-animation-type="fadeInUp" data-animation-duration="1" data-animation-delay="0.8"><img src="images/places03.jpg" alt="" width="340" height="226" /></a>
                             </figure>
                             <div class="details">
                                 <h4 class="box-title">Australia<small>(990 PLACES)</small></h4>
-                                <a href="hotel-list-view.html" title="" class="button">SEE ALL</a>
+                                <a asp-area="" asp-page="/thanks" title="" class="button">SEE ALL</a>
                             </div>
                         </article>
                     </div>

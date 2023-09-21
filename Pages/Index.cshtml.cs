@@ -21,5 +21,11 @@ namespace APTravelApp.Pages
         {
 
         }
+
+
+        public async Task<IActionResult> OnPost()
+        {
+            return RedirectToPage("/Thanks");
+        }
     }
 }
