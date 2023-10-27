@@ -1,0 +1,317 @@
+﻿@page
+@model APTravelApp.Pages.EnquiryModel
+@{
+}
+
+
+
+<section id="content">
+    <div class="container">
+        <div class="travelo-box">
+
+
+
+
+
+            @using (Html.BeginForm(FormMethod.Post, new { id = "frmSales" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <input type="hidden" value="1" asp-for="SaleModel!.FormId" />
+                <h4 class="box-title">Contact Detail</h4>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <label> Name</label>
+                        <input class="input-text full-width" type="text" placeholder="Name" asp-for="SaleModel!.Name" />
+                        <span asp-validation-for="SaleModel.Name"></span>
+                    </div>
+                    <div class="col-xs-4">
+                        <label>Phone</label>
+                        <input class="input-text full-width phone" type="text" placeholder="Phone No" asp-for="SaleModel!.PhoneNo" />
+                        <span asp-validation-for="SaleModel.PhoneNo"></span>
+                    </div>
+                    <div class="col-xs-4">
+                        <label> Email</label>
+                        <input class="input-text full-width email" type="text" placeholder="Email" asp-for="SaleModel!.Email" />
+                        <span asp-validation-for="SaleModel.Email"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label> Remark</label>
+                        <textarea rows="6" class="input-text full-width" placeholder="write remark here" asp-for="SaleModel!.Message"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button type="submit" class="btn-large" asp-page-handler="Sales">Confirm Booking</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Popuplar Destinations -->
+    <div class="destinations section">
+        <div class="container">
+            <h2>Popular Destinations</h2>
+            <div class="row image-box style1 add-clearfix">
+                <div class="col-sms-6 col-sm-6 col-md-3">
+                    <article class="box">
+                        <figure class="animated" data-animation-type="fadeInDown" data-animation-duration="1">
+                            <a href="#" title="" class="hover-effect"><img src="images/destinations01.jpg" alt="" width="270" height="160" /></a>
+                        </figure>
+                        <div class="details">
+                            <span class="price"><small>FROM</small>£490</span>
+                            <h4 class="box-title"><a href="hotel-detailed.html">Atlantis - The Palm<small>Paris</small></a></h4>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sms-6 col-sm-6 col-md-3">
+                    <article class="box">
+                        <figure class="animated" data-animation-type="fadeInDown" data-animation-duration="1" data-animation-delay="0.3">
+                            <a href="#" title="" class="hover-effect"><img src="images/destinations02.jpg" alt="" width="270" height="160" /></a>
+                        </figure>
+                        <div class="details">
+                            <span class="price"><small>FROM</small>£170</span>
+                            <h4 class="box-title"><a href="hotel-detailed.html">Hilton Hotel<small>LONDON</small></a></h4>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sms-6 col-sm-6 col-md-3">
+                    <article class="box">
+                        <figure class="animated" data-animation-type="fadeInDown" data-animation-duration="1" data-animation-delay="0.6">
+                            <a href="#" title="" class="hover-effect"><img src="images/destinations03.jpg" alt="" width="270" height="160" /></a>
+                        </figure>
+                        <div class="details">
+                            <span class="price"><small>FROM</small>£130</span>
+                            <h4 class="box-title"><a href="hotel-detailed.html">MGM Grand<small>LAS VEGAS</small></a></h4>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sms-6 col-sm-6 col-md-3">
+                    <article class="box">
+                        <figure class="animated" data-animation-type="fadeInDown" data-animation-duration="1" data-animation-delay="0.9">
+                            <a href="#" title="" class="hover-effect"><img src="images/destinations04.jpg" alt="" width="270" height="160" /></a>
+                        </figure>
+                        <div class="details">
+                            <span class="price"><small>FROM</small>£290</span>
+                            <h4 class="box-title"><a href="hotel-detailed.html">Crown Casino<small>ASUTRALIA</small></a></h4>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Honeymoon -->
+    <div class="honeymoon section global-map-area promo-box parallax" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="col-sm-6 content-section description pull-right">
+                <h1 class="title">Popular Destinations for Honeymoon</h1>
+                <p>
+                    Experience the best tours with the greatest planned itinerariesto get the best adventurous memories.
+
+                </p>
+                <div class="row places image-box style9">
+                    <div class="col-sms-4 col-sm-4">
+                        <article class="box">
+                            <figure>
+                                <a asp-area="" asp-page="/thanks" title="" class="hover-effect yellow middle-block animated" data-animation-type="fadeInUp" data-animation-duration="1">
+                                    <img src="images/places01.jpg" alt="" width="306" height="170" />
+                                </a>
+                            </figure>
+                            <div class="details">
+                                <h4 class="box-title">Paris<small>(990 PLACES)</small></h4>
+                                <a asp-area="" asp-page="/thanks" title="" class="button">SEE ALL</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sms-4 col-sm-4">
+                        <article class="box">
+                            <figure>
+                                <a asp-area="" asp-page="/thanks" title="" class="hover-effect yellow middle-block animated" data-animation-type="fadeInUp" data-animation-duration="1" data-animation-delay="0.4"><img src="images/places02.jpg" alt="" width="175" height="175" /></a>
+                            </figure>
+                            <div class="details">
+                                <h4 class="box-title">Greece<small>(990 PLACES)</small></h4>
+                                <a asp-area="" asp-page="/thanks" title="" class="button">SEE ALL</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sms-4 col-sm-4">
+                        <article class="box">
+                            <figure>
+                                <a asp-area="" asp-page="/thanks" title="" class="hover-effect yellow middle-block animated" data-animation-type="fadeInUp" data-animation-duration="1" data-animation-delay="0.8"><img src="images/places03.jpg" alt="" width="340" height="226" /></a>
+                            </figure>
+                            <div class="details">
+                                <h4 class="box-title">Australia<small>(990 PLACES)</small></h4>
+                                <a asp-area="" asp-page="/thanks" title="" class="button">SEE ALL</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 image-container no-margin">
+                <img src="images/couple.png" alt="" class="animated" data-animation-type="fadeInUp" data-animation-duration="2">
+            </div>
+        </div>
+    </div>
+
+    <!-- Did you Know? section -->
+    <div class="offers section">
+        <div class="container">
+            <h1 class="text-center">Did you know?</h1>
+            <p class="col-xs-9 center-block no-float text-center">
+                Travelling is one of the best experiences one can have. It is the top therapeutic activity for your
+                mind, body and soul. Imbibing your memory with wonderful journeys and locations is a great way to
+                recharge that mind fruitfully and with some extraordinary moments. To plan a great journey for you
+                effortlessly we are here to serve you with the best.
+            </p>
+            <div class="row image-box style2">
+                <div class="col-md-6">
+                    <article class="box">
+                        <figure class="animated" data-animation-type="fadeInLeft" data-animation-duration="1">
+                            <a href="#" title=""><img src="images/offers01.jpg" alt="" width="272" height="192" /></a>
+                        </figure>
+                        <div class="details">
+                            <h4>Hire Cars</h4>
+                            <p>
+                                Get the experience with the most luxurious car bookings at the best affordable prices.
+                            </p>
+                            <a href="#" title="" class="button">SEE ALL</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6">
+                    <article class="box">
+                        <figure class="animated" data-animation-type="fadeInLeft" data-animation-duration="1" data-animation-delay="0.4">
+                            <a href="#" title=""><img src="images/offers02.jpg" alt="" width="272" height="192" /></a>
+                        </figure>
+                        <div class="details">
+                            <h4>Cruise Deals</h4>
+                            <p>
+                                Get the best water experience with the most prestigious cruise deals.
+                            </p>
+                            <a href="#" title="" class="button">SEE ALL</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6">
+                    <article class="box">
+                        <figure class="animated" data-animation-type="fadeInLeft" data-animation-duration="1">
+                            <a href="#" title=""><img src="images/offers03.jpg" alt="" width="272" height="192" /></a>
+                        </figure>
+                        <div class="details">
+                            <h4>Things To Do</h4>
+                            <p>
+                                Experience the best tours with the greatest planned itinerariesto get the best adventurous
+                                memories.
+                            </p>
+                            <a href="#" title="" class="button">SEE ALL</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6">
+                    <article class="box">
+                        <figure class="animated" data-animation-type="fadeInLeft" data-animation-duration="1" data-animation-delay="0.4">
+                            <a href="#" title=""><img src="images/offers04.jpg" alt="" width="272" height="192" /></a>
+                        </figure>
+                        <div class="details">
+                            <h4>Fly in Comfort</h4>
+                            <p>Have the best and most comfortable flying experience with our best-matched flights for you. </p>
+                            <a href="#" title="" class="button">SEE ALL</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features section -->
+    <div class="features section global-map-area parallax" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row image-box style7">
+                <div class="col-sms-6 col-sm-6 col-md-3">
+                    <article class="box">
+                        <figure class="middle-block">
+                            <img src="images/shortcodes/image-box/style07/1.jpg" alt="" class="middle-item" width="283" height="200" />
+                            <span class="opacity-wrapper"></span>
+                        </figure>
+                        <div class="details" style="min-height: 295px">
+                            <h4><a href="#">Best Price Guarantee</a></h4>
+                            <p>
+                                Worried about the high commissioned prices reflected by agents? Don't worry, we understand your
+                                requirements and offer the most affordable prices without charging high amounts from your
+                                pockets. We value our customers and pledge to provide them with the best in all aspects.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sms-6 col-sm-6 col-md-3">
+                    <article class="box">
+                        <figure class="middle-block">
+                            <img src="images/shortcodes/image-box/style07/2.jpg" alt="" class="middle-item" width="276" height="126" />
+                            <span class="opacity-wrapper"></span>
+                        </figure>
+                        <div class="details" style="min-height: 295px">
+                            <h4><a href="#">Travel Insurance</a></h4>
+                            <p>
+                                We value your life and understand the requirement of travel insurance. To ensure your optimum
+                                safety we make sure to include travel insurance with your package. We do value your needs and
+                                thus select the insurance accordingly as per what is the best suited for you.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sms-6 col-sm-6 col-md-3">
+                    <article class="box">
+                        <figure class="middle-block">
+                            <img src="images/shortcodes/image-box/style07/3.jpg" alt="" class="middle-item" width="284" height="189" />
+                            <span class="opacity-wrapper"></span>
+                        </figure>
+                        <div class="details" style="min-height: 295px">
+                            <h4><a href="#">Why Choose</a></h4>
+                            <p>
+                                At Airport Travel our major focus is to serve our customers the best. We are not only focused on the
+                                practical part of your trip but value your emotional connection with the trip and offer you the best
+                                packages.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sms-6 col-sm-6 col-md-3">
+                    <article class="box">
+                        <figure class="middle-block">
+                            <img src="images/shortcodes/image-box/style07/4.jpg" alt="" class="middle-item" width="274" height="142" />
+                            <span class="opacity-wrapper"></span>
+                        </figure>
+                        <div class="details" style="min-height: 295px">
+                            <h4><a href="#">Need Help?</a></h4>
+                            <p>
+                                Our customer service team is here to help you with all your queries.
+                            </p>
+                            <p style="margin-top:20px">
+                                Email us: <a href="mailto:info@airport-travel.net">info@airport-travel.net</a>
+                            </p>
+                            <p></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+}
+
+
+
+
+
+
+
