@@ -22,7 +22,7 @@ namespace APTravelApp.Models
         public string PhoneNo { get; set; }
 
         public string Message { get; set; }
-
-
-	}
+        [Required]
+        public string CaptchaCode { get; set; }
+    }
 }

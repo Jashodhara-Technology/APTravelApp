@@ -7,7 +7,7 @@ using System.Drawing.Imaging;
 
 namespace APTravelApp.Models
 {
-    public static class Captcha
+    public static class CaptchaHelper
     {
         const string Letters = "2346789ABCDEFGHJKLMNPRTUVWXYZ";
 
