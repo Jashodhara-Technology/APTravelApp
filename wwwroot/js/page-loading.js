@@ -40,5 +40,8 @@ if (typeof Pace != "undefined") {
             var percent = document.getElementsByClassName("pace-progress")[0].getAttribute("data-progress-text");
             document.getElementsByClassName("loading-progress")[0].style.width = percent;
         } catch(e) {  }
-    }, 50);
+    }, 10);
+
+
+
 }
