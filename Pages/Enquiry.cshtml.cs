@@ -33,30 +33,38 @@ namespace APTravelApp.Pages
             string wwwRootPath = _hostEnvironment.WebRootPath;
             try
             {
-                ModelState.Clear();
-                if (TryValidateModel(SaleModel))
+                if (CaptchaHelper.ValidateCaptchaCode(SaleModel.CaptchaCode, HttpContext))
                 {
-                    string body = string.Empty;
-                    string path = Path.Combine(wwwRootPath + "/template/", "emailer-query.html");
-                    using (StreamReader reader = new StreamReader(path))
+                    ModelState.Clear();
+                    if (TryValidateModel(SaleModel))
                     {
-                        body = reader.ReadToEnd();
+                        string body = string.Empty;
+                        string path = Path.Combine(wwwRootPath + "/template/", "emailer-query.html");
+                        using (StreamReader reader = new StreamReader(path))
+                        {
+                            body = reader.ReadToEnd();
+                        }
+                        body = body.Replace("{Name}", SaleModel.Name);
+                        body = body.Replace("{Email}", SaleModel.Email);
+                        body = body.Replace("{PhoneNo}", SaleModel.PhoneNo);
+                        body = body.Replace("{Message}", SaleModel.Message);
+                        MailRequest _mail = new MailRequest();
+                        _mail.Subject = "Sales Query";
+                        _mail.ToEmail = _mailSettings.Mail;
+                        _mail.Body = body;
+                        _mail.SourcePath = _hostEnvironment.WebRootPath + "/Exception/";
+                        await mailSrv.SendEmailAsync(_mail);
+                        await ThanksMail(SaleModel.Name, SaleModel.Email);
+                        return RedirectToPage("/Thanks");
                     }
-                    body = body.Replace("{Name}", SaleModel.Name);
-                    body = body.Replace("{Email}", SaleModel.Email);
-                    body = body.Replace("{PhoneNo}", SaleModel.PhoneNo);
-                    body = body.Replace("{Message}", SaleModel.Message);
-                    MailRequest _mail = new MailRequest();
-                    _mail.Subject = "Sales Query";
-                    _mail.ToEmail = _mailSettings.Mail;
-                    _mail.Body = body;
-                    _mail.SourcePath = _hostEnvironment.WebRootPath + "/Exception/";
-                    await mailSrv.SendEmailAsync(_mail);
-                    await ThanksMail(SaleModel.Name, SaleModel.Email);
-                    return RedirectToPage("/Thanks");
+                    else
+                    {
+                        return Page();
+                    }
                 }
                 else
                 {
+                    ModelState.AddModelError("SaleModel.CaptchaCode", "captcha code entered is invalid.");
                     return Page();
                 }
             }

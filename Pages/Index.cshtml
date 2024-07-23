@@ -1661,6 +1661,7 @@
                         <figure class="middle-block">
                             <img src="images/shortcodes/image-box/style07/4.jpg" alt="" class="middle-item" width="274" height="142" />
                             <span class="opacity-wrapper"></span>
+                         
                         </figure>
                         <div class="details" style="min-height: 295px">
                             <h4><a href="#">Need Help?</a></h4>
@@ -1679,43 +1680,12 @@
     </div>
 </section>
 
-<div id="myModal" class="modal fade in" role="dialog" style="display: block;">
-    <div class="modal-dialog" style="margin-top: 20%">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header" style="padding: 0px; border-bottom: none">
-                <button type="button" class="close" data-dismiss="modal" style="position: relative;
-    top: -24px;
-    right: -16px;
-    color: #fff;
-    opacity: inherit;
-    font-size: 34px;">
-                    ×
-                </button>
-            </div>
-            <div class="modal-body" style="padding-top:0px">
-                <h3 class="text-danger text-center" style="font-size: 40px">Turn your mile in to smile</h3>
-            </div>
-
-            <!-- <audio controls autoplay>
-
-              <source src="images/audio-1.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-            </audio>
-                -->
-
-
-        </div>
-
-    </div>
-</div>
 
 @section Scripts{
 
     <!-- Javascript Page Loader -->
     <script type="text/javascript" src="js/pace.min.js" data-pace-options='{ "ajax": false }'></script>
-    <script type="text/javascript" src="js/page-loading.js"></script>
+    <script type="text/javascript" src="js/page-loading.js?@DateTime.Now.Ticks"></script>
 
 
     <script type="text/javascript" src="components/revolution_slider/js/extensions/revolution.extension.video.min.js"></script>
@@ -1729,11 +1699,11 @@
 
 
     <script type="text/javascript">
-        tjq(window).load(function () {
-            setTimeout(function () {
-                tjq('#myModal').modal('show');
-            }, 2000);
-        });
+        // tjq(window).load(function () {
+        //     setTimeout(function () {
+        //         tjq('#myModal').modal('show');
+        //     }, 2000);
+        // });
 
 
 

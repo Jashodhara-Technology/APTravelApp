@@ -64,7 +64,16 @@
                         @using (Html.BeginForm(FormMethod.Post, new { id = "frmSales" }))
                         {
                             @Html.AntiForgeryToken()
-                            
+
+
+                            <div class="row form-group">
+                                <div class="col-xs-12">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                </div>
+                            </div>
+
+
+
 
                             <input type="hidden" value="1" asp-for="SaleModel!.FormId" />
 
@@ -85,7 +94,26 @@
                                 <label>Your Message</label>
                                 <textarea rows="6" class="input-text full-width" placeholder="write message here" asp-for="SaleModel!.Message"></textarea>
                             </div>
+
+
+                            <div class="row form-group">
+                                <div class="col-xs-3">
+                                    <img src="@Url.Page("Index","CaptchaCode",new {name="captcha.jpg" })" />
+                                </div>
+                                <div class="col-xs-9">
+                                    <label>Captcha Code</label>
+                                    <input class="input-text full-width" type="text" maxlength="4" placeholder="Capthcha" asp-for="SaleModel!.CaptchaCode" />
+                                    <span asp-validation-for="SaleModel.CaptchaCode" class="text-danger" ></span>
+                                </div>
+                            </div>
                             <button type="submit" class="btn-large full-width" asp-page-handler="Sales">SEND MESSAGE</button>
+
+
+
+
+
+
+
 
 
                         }
